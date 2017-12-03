@@ -321,13 +321,27 @@
 <p>我的 Powershell 路径是：<br>PS C:\Users\qiqi\Documents\GitHub\hexo-demo&gt;</p>
 </blockquote>
 <p>对我来说，需要</p>
-<ul>
-<li>创建名为 username.github.io 的 GitHub 仓库（冰箱），这一步需要在 GitHub 网站上完成</li>
-<li>生成一个文件夹（大象，大象默认名叫 public ，我的叫 VinciXie.github.io ）</li>
-<li>cd 到生成的文件夹下，在命令行执行几行语句（把大象放进冰箱）</li>
-</ul>
-<p>后两步语句是这样<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成一个文件夹</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="built_in">cd</span> public</span><br><span class="line"><span class="comment"># 和仓库关联</span></span><br><span class="line"><span class="comment"># 下面几行语句是来自 GitHub 新建一个仓库之后，出现的那个页面</span></span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/username/username.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
-<p>我的语句是这样<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"><span class="built_in">cd</span> VinciXie.github.io</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/VinciXie/VinciXie.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><p>创建名为 username.github.io 的 GitHub 仓库（冰箱），这一步需要在 GitHub 网站上完成</p>
+<blockquote>
+<p>怎么创建仓库呢，GitHub 的仓库叫 repository , 打开 <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> ，登陆账户，页面上有唯一一个绿色的按钮，叫做 New repository , 点击它</p>
+</blockquote>
+</li>
+<li><p>生成一个文件夹（大象，大象默认名叫 public ，我的叫 VinciXie.github.io ）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成一个文件夹</span></span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cd 到生成的文件夹下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd 到生成的文件夹下</span></span><br><span class="line"><span class="built_in">cd</span> public</span><br><span class="line"><span class="comment"># 我的是 VinciXie.github.io</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>现在我的 Powershell 路径是：<br>PS C:\Users\qiqi\Documents\GitHub\hexo-demo\VinciXie.github.io&gt;</p>
+</blockquote>
+<ol>
+<li>在命令行执行几行语句（把大象放进冰箱）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 和仓库关联</span></span><br><span class="line"><span class="comment"># 下面几行语句是来自 GitHub 新建一个仓库之后，出现的那个页面</span></span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/username/username.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>连起来的话，我的语句是这样<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"><span class="built_in">cd</span> VinciXie.github.io</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/VinciXie/VinciXie.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
 <p>理论上现在打开 username.github.io 页面，就可以看到 hello world 了，我在地址栏输入 <a href="https://VinciXie.github.io">https://VinciXie.github.io</a> ，就看到了我的文章</p>
 <h3 id="怎么更新-blog"><a href="#怎么更新-blog" class="headerlink" title="怎么更新 blog"></a>怎么更新 blog</h3><p>刚刚其实只是一个快速执行的方法，把大象放进冰箱这一步，还需细拆：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line"><span class="comment"># 是将新生成的项目初始化成一个 git 仓库，新仓库只用执行一次</span></span><br></pre></td></tr></table></figure>
