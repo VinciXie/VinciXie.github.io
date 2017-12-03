@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="如之前所说，此文的目的是让刚学编程的我也可看懂并使用，所以会很基础。  Ps: 此教程是以 Windows 环境为基础。  安装环境安装和使用 Hexo 需要下列应用程序：  Node.js Git   直接点上面链接，就能看到下载，node 没有问题，但 git 由于某些原因，可能下载不下来，可以百度解决…  有了 node 和 git 环境之后，就可以用 npm 了。不过由于某些原因，我通常使">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-02T14:07:28.320Z">
+<meta property="og:updated_time" content="2017-12-03T15:48:51.898Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用 hexo 快速搭建博客（二）——怎样使用 hexo">
 <meta name="twitter:description" content="如之前所说，此文的目的是让刚学编程的我也可看懂并使用，所以会很基础。  Ps: 此教程是以 Windows 环境为基础。  安装环境安装和使用 Hexo 需要下列应用程序：  Node.js Git   直接点上面链接，就能看到下载，node 没有问题，但 git 由于某些原因，可能下载不下来，可以百度解决…  有了 node 和 git 环境之后，就可以用 npm 了。不过由于某些原因，我通常使">
@@ -321,7 +321,11 @@
 </blockquote>
 <p>然后在命令行输出以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>这个 folder 是项目名称，</p>
+<p>这个 folder 是项目名称，我自己是叫 hexo-demo</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init hexo-demo</span><br><span class="line">$ <span class="built_in">cd</span> hexo-demo</span><br><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>我的 Powershell 路径是：<br>PS C:\Users\qiqi\Documents\GitHub\hexo-demo&gt;</p>
 </blockquote>
 <p>等安装完，项目就生成了，然后运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
 <p>就可以看到它在命令行输出的本地地址，用鼠标光标选中它，右键就可以复制，通常是 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，然后粘贴到浏览器地址栏，敲下回车，就可以看到它的 hello world 页面了。</p>
