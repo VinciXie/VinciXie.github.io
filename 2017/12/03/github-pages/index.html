@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="这个小教程的目的是教小白把博客放到 GitHub pages 上面，那就得了解以下 GitHub Pages 是什么。  GitHub 是什么就不细讲了，不懂的就百度一下，看一下百度列出来的文章，不用点进去看细节，扫一眼就够  我怎么解释 GitHub Pages我会这样解释，它是一个的网站。从其机制上来讲，只要创建一个 GitHub 仓库，名为 username.github.io ，里面放一个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-03T03:13:43.935Z">
+<meta property="og:updated_time" content="2017-12-03T03:38:18.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用 hexo 快速搭建博客（三）——怎样发布到 github-pages">
 <meta name="twitter:description" content="这个小教程的目的是教小白把博客放到 GitHub pages 上面，那就得了解以下 GitHub Pages 是什么。  GitHub 是什么就不细讲了，不懂的就百度一下，看一下百度列出来的文章，不用点进去看细节，扫一眼就够  我怎么解释 GitHub Pages我会这样解释，它是一个的网站。从其机制上来讲，只要创建一个 GitHub 仓库，名为 username.github.io ，里面放一个">
@@ -316,14 +316,18 @@
 <p>不过注意一点，hexo 生成的项目根目录下有一个_config.yml 文件，这是它的配置文件，里面有一项 url，要改成如下格式<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">https://username.github.io</span></span><br></pre></td></tr></table></figure></p>
 <p>我改成了这样<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">https://VinciXie.github.io</span></span><br></pre></td></tr></table></figure></p>
 <p>另外我还改了一项，之后再说<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="comment"># 我把</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line"><span class="comment"># 改成了</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">VinciXie.github.io</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>我的 Powershell 路径是：<br>PS C:\Users\qiqi\Documents\GitHub\hexo-demo&gt;</p>
+</blockquote>
 <p>对我来说，需要</p>
 <ul>
-<li>使用 hexo g 命令生成一个文件夹（大象，大象默认名叫 public，我的叫 VinciXie.github.io）</li>
-<li>创建名为 username.github.io 的 GitHub 仓库（冰箱）</li>
-<li>cd 到生成的文件夹下，在命令行执行下列语句（把大象放进冰箱）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/username/username.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-</li>
+<li>创建名为 username.github.io 的 GitHub 仓库（冰箱），这一步需要在 GitHub 网站上完成</li>
+<li>生成一个文件夹（大象，大象默认名叫 public ，我的叫 VinciXie.github.io ）</li>
+<li>cd 到生成的文件夹下，在命令行执行几行语句（把大象放进冰箱）</li>
 </ul>
-<p>现在打开 username.github.io 页面，就可以看到 hello world 了</p>
+<p>后两步语句是这样<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成一个文件夹</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="built_in">cd</span> public</span><br><span class="line"><span class="comment"># 和仓库关联</span></span><br><span class="line"><span class="comment"># 下面几行语句是来自 GitHub 新建一个仓库之后，出现的那个页面</span></span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/username/username.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<p>我的语句是这样<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"><span class="built_in">cd</span> VinciXie.github.io</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/VinciXie/VinciXie.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<p>理论上现在打开 username.github.io 页面，就可以看到 hello world 了，我在地址栏输入 <a href="https://VinciXie.github.io">https://VinciXie.github.io</a> ，就看到了我的文章</p>
 <h3 id="怎么更新-blog"><a href="#怎么更新-blog" class="headerlink" title="怎么更新 blog"></a>怎么更新 blog</h3><p>刚刚其实只是一个快速执行的方法，把大象放进冰箱这一步，还需细拆：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line"><span class="comment"># 是将新生成的项目初始化成一个 git 仓库，新仓库只用执行一次</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">"first commit"</span></span><br><span class="line"><span class="comment"># 暂时理解为将文件变动保存到本地仓库吧</span></span><br></pre></td></tr></table></figure>
@@ -337,7 +341,27 @@
 <p>注意：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"my commit"</span></span><br><span class="line"><span class="comment"># 这个引号里面是自定义的信息</span></span><br></pre></td></tr></table></figure></p>
 <p>emmm…为什么文件夹名是 VinciXie.github.io，因为我修改了_config.yml 文件里<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public_dir: VinciXie.github.io</span><br></pre></td></tr></table></figure></p>
 <p>我只是喜欢保持我的文件夹名和仓库名一致</p>
-<p>然后我就可以 <a href="https://vincixie.github.io">https://vincixie.github.io</a> 在看到更新后的页面了</p>
+<p>最后看一下这个生成的文件夹结构</p>
+<ul>
+<li>VinciXie.github.io<ul>
+<li>.git</li>
+<li>2017</li>
+<li>archives<ul>
+<li>index.html</li>
+</ul>
+</li>
+<li>css</li>
+<li>images</li>
+<li>js</li>
+<li>lib</li>
+<li>index.html</li>
+</ul>
+</li>
+</ul>
+<p>然后我就可以 <a href="https://vincixie.github.io">https://vincixie.github.io</a> 在看到更新后的页面了，默认加载 index.html，这个是机制</p>
+<p>那是什么机制呢，就是你通过 GitHub 访问 vincixie.github.io 这个文件夹的时候，它会默认去找 index.html ，然后返回给浏览器</p>
+<p>再举个例子，vincixie.github.io 下有一个 archives 文件夹，如果浏览器地址栏输入 <a href="https://vincixie.github.io/archives/">https://vincixie.github.io/archives/</a> ，则会看到 archives 文件夹下的那个 index.html</p>
+<p>这就是为什么会有 这么多的 index.html ，这是机制，或者叫规则，GitHub Pages 的后端就是这样处理请求的，以后这样的机制还会遇到很多</p>
 
       
     </div>
